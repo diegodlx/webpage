@@ -15,6 +15,8 @@ html {
   scroll-margin-top: 80px;
 }
 
+/* ------------ HEADER ------------ */
+
 header {
     position: fixed;
     width: 100%;
@@ -68,7 +70,7 @@ nav ul {
   height: 35vh;
   position: fixed;
   top: 60px;
-  right: -30%;
+  right: -100%;
   width: 100px;
   transition: all 0.5s;
 }
@@ -91,12 +93,11 @@ nav ul li a {
     display: none;
 }
 
-/* Main content */
+/* ------------ MAIN ------------ */
 
 main {
     text-align: center;
     height: 95vh;
-    background-color: red;
 }
 
 main img {
@@ -119,7 +120,6 @@ main div {
 
 main div h1 {
     font-size: 2rem;
-    /* margin-bottom: 20px; */
 }
 
 main div p {
@@ -140,7 +140,8 @@ main div p {
     font-size: 1.2rem;
 }
 
-/* Sobre content */
+/* ------------ SOBRE ------------ */
+
 #sobre{
     text-align: center;
 }
@@ -164,13 +165,9 @@ main div p {
     text-align: justify;
     width: 85%;
 }
-#sobre .container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
-/* Portfolio content */
+/* ------------ PORTFOLIO ------------ */
+
 #portfolio h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -207,7 +204,7 @@ main div p {
     font-size: 1.2rem;
 }
 
-/* Contato content */
+/* ------------ CONTATO ------------ */
 
 #contato {
     text-align: center;
@@ -246,15 +243,18 @@ main div p {
     color: #333;
 }
 
+.tela_grande {
+    display:none;
+}
 
 
-/* Footer content */
+/* ------------ FOOTER ------------ */
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     width: 100%;
 }
 
@@ -274,16 +274,14 @@ footer div p {
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
 
+    /* ------------ HEADER ------------ */
+
     .container {
     max-width: 540px;
   }
 
     header {
         height: 60px;
-    }
-
-    main {
-        margin-top: 30px;
     }
 
     label {
@@ -300,10 +298,43 @@ footer div p {
         width: 25%;
         transition: all 0.5s;
     }
+
+    /* ------------ MAIN ------------ */
+
+    main {
+        margin-top: 23px;
+        height: 550PX;
+    }
+
+    main div {
+       padding: 35px;
+    }
+
+    /* ------------ SOBRE ------------ */
+
+    /* ---------- PORTFOLIO ---------- */
+
+    /* ----------- CONTATO ----------- */
+
+    /* ------------ FOOTER ------------ */
+
+    footer div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer div p {
+        font-size: 1rem;
+    }
+
+    
 }
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
+
+    /* ------------ HEADER ------------ */
 
     .container {
     max-width: 720px;
@@ -330,10 +361,119 @@ footer div p {
         float: left;
     }
 
+    /* ------------ MAIN ------------ */
+
+    main {
+        height: 700PX;
+    }
+
+    main img {
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+        border: #333 solid 5px;
+    }
+
+    main div h1 {
+        font-size: 3.5rem;
+    }
+
+    main div p {
+        font-size: 2rem;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 2rem;
+    }
+
+    /* ------------ SOBRE ------------ */
+
+    #sobre h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    #sobre p {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: justify;
+        width: 90%;
+    }
+
+    /* ---------- PORTFOLIO ---------- */
+
+    #portfolio h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background-color: #333;
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        margin: 20px 20px;
+    }
+
+    .card-title {
+        font-size: 2.5rem;
+        margin: 15px 0;
+    }
+
+    .card-description {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-card {
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: white;
+        color: #333;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 2rem;
+    }
+
+    /* ----------- CONTATO ----------- */
+
+    #contato h2 {
+        font-size: 3.5rem;
+        margin-bottom: 50px;
+    }
+
+    .icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .icon-text {
+        font-size: 2rem;
+        margin-bottom: 70px;
+    }
+
+    /* ------------ FOOTER ------------ */
+
+    footer {
+        padding: 30px 0;
+    }
+
+    footer div p {
+        font-size: 1.7rem;
+    }
+
 }
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 992px) {  
+
+    /* ------------ HEADER ------------ */
 
     .container {
     max-width: 960px;
@@ -349,9 +489,9 @@ footer div p {
         height: 90px;
     }
 
-    main {
+    /* main {
         margin-top: 60px;
-    }
+    } */
 
     label {
         display: none;
@@ -379,22 +519,198 @@ footer div p {
         color: white;
         font-size: 2rem;
     }
+
+    .tela_phone {
+        display: none;
+    }
+
+    .tela_grande {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .flex4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ------------ MAIN ------------ */
+
+    main {
+        margin-top: 53px;
+        height: 850PX;
+    }
+
+    main img {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+        border: #333 solid 5px;
+    }
+    
+
+    /* ------------ SOBRE ------------ */
+
+    /* ---------- PORTFOLIO ---------- */
+
+    /* ----------- CONTATO ----------- */
+
+    .tela_grande {
+       height: 300px;
+       align-items: center;
+    }
+
+    .tela_grande span {
+        font-size: 1.7rem;
+        margin-top: 15px;
+    }
+
+    /* ------------ FOOTER ------------ */
+
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
 
+    /* ------------ HEADER ------------ */
+
     .container {
     max-width: 1140px;
   }
+
+    /* ------------ MAIN ------------ */
+
+    
+
+    /* ------------ SOBRE ------------ */
+
+
+    #sobre p {
+        width: 95%;
+    }
+
+
+    /* ---------- PORTFOLIO ---------- */
+
+    .Cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #portfolio h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 20px;
+        margin: 10px 10px;
+    }
+
+    .card-title {
+        height: 80px;
+        align-content: center;
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+
+    .card-description {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-card {
+        display: inline-block;
+        padding: 15px 40px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1.7rem;
+    }
+
+    /* ----------- CONTATO ----------- */
+
+    #contato h2 {
+        margin-top: 30px;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tela_grande span {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+
+    /* ------------ FOOTER ------------ */
 
 }
 
 /* PC Full HD >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1400px) {
 
+    /* ------------ HEADER ------------ */
+
     .container {
     max-width: 1360px;
   }
+
+    /* ------------ MAIN ------------ */
+
+    main {
+        margin-top: 20px;
+        height: 650PX;
+    }
+
+    main img {
+        width: 25%;
+    }
+
+    main div h1 {
+        font-size: 3rem;
+    }
+
+    main div p {
+        font-size: 1.7rem;
+    }
+
+    main div {
+       padding: 35px;
+    }
+
+    .button {
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 1.7rem;
+    }
+
+
+    /* ------------ SOBRE ------------ */
+
+    #sobre h2 {
+        font-size: 3rem;
+    }
+
+    /* ---------- PORTFOLIO ---------- */
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    /* ----------- CONTATO ----------- */
+
+    #contato h2 {
+        font-size: 3rem;
+    }
+
+    /* ------------ FOOTER ------------ */
 
 }
