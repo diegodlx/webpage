@@ -185,6 +185,12 @@ main div p {
     margin: 20px 20px;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .card-title {
     margin: 10px 0;
 }
@@ -245,6 +251,10 @@ main div p {
 
 .tela_grande {
     display:none;
+}
+
+#contato p {
+    margin-top: 30px;
 }
 
 
