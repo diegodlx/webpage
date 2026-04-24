@@ -5,6 +5,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-color: #333;
+    --label-color: rgba(0, 0, 0, 0.5);
+    --ul-color: rgba(52, 53, 56, 0.95);
+    --background-color: #f9fafb;
+    --button-color: #333;
+    --card-color: #333;
+    --card-button-color: white;
+    --card-button-text-color: #333;
+    --text-color: rgba(0,0,0,0.5);
+    --footer-color: #333;
+    --light-text-color: white;
+    --border-color: #ccc;
+    --dark-text-color: #333;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +37,7 @@ header {
     position: fixed;
     width: 100%;
     height: 60px;
-    background-color: #333;
+    background-color: var(--header-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +49,7 @@ label {
     position: fixed;
     top: 6px;
     right: 15px;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--label-color);
 }
 
 .container {
@@ -59,14 +75,14 @@ label {
 }
 
 .logo-header p {
-    color: white;
+    color: var(--light-text-color);
     font-size: 1rem;
     font-weight: 600;
 }
 
 nav ul {
   list-style: none;
-  background-color: rgba(52, 53, 56, 0.95);
+  background-color: var(--ul-color);
   height: 35vh;
   position: fixed;
   top: 60px;
@@ -86,11 +102,22 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--light-text-color);
 }
 
 #check {
     display: none;
+}
+
+.scroll-logo {
+  opacity: 0;
+  animation: reveal linear forwards;
+  animation-timeline: scroll();
+  animation-range: 300px 600px;
+}
+
+@keyframes reveal {
+  to { opacity: 1; }
 }
 
 /* ------------ MAIN ------------ */
@@ -98,6 +125,8 @@ nav ul li a {
 main {
     text-align: center;
     height: 95vh;
+    background-color: var(--background-color);
+    display: flex;
 }
 
 main img {
@@ -114,7 +143,6 @@ main div {
     align-items: center;
     width: 100%;
     height: 100%;
-
     padding: 35px;
 }
 
@@ -124,26 +152,35 @@ main div h1 {
 
 main div p {
     font-size: 1.4rem;
-    /* margin-bottom: 20px; */
-    /* text-align: justify; */
-    /* width: 70%; */
 }
 
 .button {
-    /* margin-top: 20px; */
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--light-text-color);
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 /* ------------ SOBRE ------------ */
 
 #sobre{
+    border-top: var(--border-color) solid 1px;
     text-align: center;
+    background-color: var(--background-color);
+    padding-top: 30px;
+    padding-bottom: 35px;
+    
 }
 
 #sobre h2 {
@@ -164,6 +201,7 @@ main div p {
     margin-bottom: 20px;
     text-align: justify;
     width: 85%;
+    color: var(--dark-text-color)
 }
 
 /* ------------ PORTFOLIO ------------ */
@@ -174,15 +212,20 @@ main div p {
 }
 
 #portfolio {
+    border-top: var(--border-color) solid 1px;
     text-align: center;
+    background-color: var(--background-color);
+    padding-top: 30px;
+    padding-bottom: 35px;
 }
 
 .card {
-    background-color: #333;
-    color: white;
+    background-color: var(--card-color);
+    color: var(--light-text-color);
     padding: 20px;
     border-radius: 10px;
     margin: 20px 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -203,17 +246,28 @@ main div p {
 .btn-card {
     display: inline-block;
     padding: 10px 20px;
-    background-color: white;
-    color: #333;
+    background-color: var(--card-button-color);
+    color: var(--card-button-text-color);
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
 }
 
+.btn-card:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
 /* ------------ CONTATO ------------ */
 
 #contato {
+    border-top: var(--border-color) solid 1px;
     text-align: center;
+    background-color: var(--background-color);
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 #contato h2 {
@@ -246,7 +300,7 @@ main div p {
 
 #contato a {
     text-decoration: none;
-    color: #333;
+    color: var(--dark-text-color);
 }
 
 .tela_grande {
@@ -257,12 +311,22 @@ main div p {
     margin-top: 30px;
 }
 
+.icon:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+span:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 
 /* ------------ FOOTER ------------ */
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--footer-color);
+    color: var(--light-text-color);
     text-align: center;
     padding: 12px 0;
     width: 100%;
@@ -381,7 +445,6 @@ footer div p {
         width: 50%;
         height: auto;
         border-radius: 50%;
-        border: #333 solid 5px;
     }
 
     main div h1 {
@@ -395,8 +458,6 @@ footer div p {
     .button {
         display: inline-block;
         padding: 20px 40px;
-        background-color: #333;
-        color: white;
         text-decoration: none;
         border-radius: 10px;
         font-size: 2rem;
@@ -424,8 +485,6 @@ footer div p {
     }
 
     .card {
-        background-color: #333;
-        color: white;
         padding: 40px;
         border-radius: 20px;
         margin: 20px 20px;
@@ -444,8 +503,6 @@ footer div p {
     .btn-card {
         display: inline-block;
         padding: 20px 40px;
-        background-color: white;
-        color: #333;
         text-decoration: none;
         border-radius: 10px;
         font-size: 2rem;
@@ -526,7 +583,7 @@ footer div p {
     }
 
     .logo-header p {
-        color: white;
+        color: var(--light-text-color);
         font-size: 2rem;
     }
 
@@ -558,7 +615,6 @@ footer div p {
         width: 40%;
         height: auto;
         border-radius: 50%;
-        border: #333 solid 5px;
     }
     
 
