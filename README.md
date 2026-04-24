@@ -110,13 +110,19 @@ Por se tratar de um projeto estático, basta abrir o arquivo `index.html` em qua
 
 ### Opção 1
 
+Acessar diretamente do link do GitHub Pages:
+
+[diegodlx.github.io.webpage](diegodlx.github.io.webpage)
+
+### Opção 2
+
 Abrir diretamente o arquivo:
 
 ```bash
 index.html
 ```
 
-### Opção 2
+### Opção 3
 
 Se preferir, utilizar uma extensão como Live Server no VS Code para rodar localmente.
 
