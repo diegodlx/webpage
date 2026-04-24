@@ -112,7 +112,7 @@ Por se tratar de um projeto estático, basta abrir o arquivo `index.html` em qua
 
 Acessar diretamente do link do GitHub Pages:
 
-[diegodlx.github.io.webpage](diegodlx.github.io.webpage)
+[diegodlx.github.io.webpage](diegodlx.github.io/webpage)
 
 ### Opção 2
 
